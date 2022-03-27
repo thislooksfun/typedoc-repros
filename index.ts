@@ -6,9 +6,9 @@ export class ExampleClass {
   /** This wrongly complains about not being documented */
   [Symbol.iterator]() {
     return {
-      // These are both complaining about not being documented, which makes
-      // sense.
+      /** This also says it's not documented. */
       index: 0,
+      /** This one too. */
       next(): IteratorResult<number> {
         return { done: false, value: this.index++ };
       },
