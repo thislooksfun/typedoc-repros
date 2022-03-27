@@ -1,0 +1,25 @@
+{
+  "name": "typedoc-repros",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gendoc": "typedoc index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thislooksfun/typedoc-repros.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thislooksfun/typedoc-repros/issues"
+  },
+  "homepage": "https://github.com/thislooksfun/typedoc-repros#readme",
+  "devDependencies": {
+    "typedoc": "^0.22.13"
+  }
+}

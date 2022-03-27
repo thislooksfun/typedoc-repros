@@ -1,0 +1,33 @@
+/** I am documented, but the validator thinks otherwise. */
+export type FunctionType = (foo: string) => string;
+
+/** This docblock works fine. */
+export class ExampleClass {
+  /** This wrongly complains about not being documented */
+  [Symbol.iterator]() {
+    return {
+      // These are both complaining about not being documented, which makes
+      // sense.
+      index: 0,
+      next(): IteratorResult<number> {
+        return { done: false, value: this.index++ };
+      },
+    };
+  }
+
+  /**
+   * @internal This whole signature, including the return type, is ignored
+   * because `excludeInternal` is set to `true`.
+   */
+  [Symbol.asyncIterator]() {
+    return {
+      // This does _not_ complain, which is what I would expect.
+      index: 0,
+      // Even though it's not rendered in the final docs, it still complains
+      // that this isn't documented.
+      async next(): Promise<IteratorResult<number>> {
+        return { done: false, value: this.index++ };
+      },
+    };
+  }
+}

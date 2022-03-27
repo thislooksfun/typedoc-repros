@@ -1,0 +1,7 @@
+{
+  "include": ["index.ts"],
+  "exclude": ["node_modules/*", "dist/*"],
+  "compilerOptions": {
+    "target": "ES2020"
+  }
+}

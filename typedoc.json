@@ -1,0 +1,6 @@
+{
+  "excludeInternal": true,
+  "validation": {
+    "notDocumented": true
+  }
+}
